@@ -1,0 +1,903 @@
+:root {
+    --main-color:#faae5f;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+.preloder{
+    background: #66ceff url(images/pre.gif) no-repeat center center;
+    background-size: 58%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1000000;
+}
+
+img{
+    cursor: pointer;
+}
+
+
+
+.navbar {                   
+    position: fixed;
+    width: 1280px;
+    height:100px;
+    background-color: rgb(77, 77, 77);                  /*el nav bar eli fiha el logo w menu*/
+    justify-content: center;
+    align-items: center;
+    z-index: 1111;
+    
+}
+.toogle {   /*main icon mte3na */
+position: fixed;
+width: 50px;
+height: 50px;
+margin-top: 20px;
+margin-left: 20px;
+display: flex;
+background-color: rgb(66, 66, 66);
+cursor: pointer;
+flex-direction: column;
+justify-content: space-around;          /*version 1*/
+/*flex-wrap: wrap;                      
+align-items: center;*/      /*version2*/
+padding: 8px; 
+}
+.toogle span {
+width: 100%;
+background-color: var(--main-color);
+opacity: 0.5;
+height: 5px;
+transition: 0.5s;
+}
+.toogle:hover span{
+    opacity: 1;
+}
+nav{
+position: fixed; /*bech to93ed habsa ki nscrolli*/
+z-index: 99999;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: #333;
+display: flex;
+flex-direction: column;
+justify-content: center;
+transition: 0.5s;
+/*idha ken theb tjibha men fou9 louta ta3mel transform:translateY w ken theb mel imin lel isar transform:traslateX*/
+transform: translateY(-100%);
+}
+nav.open {
+    transform: translateY(0);
+}
+nav .close {    /*ell button eli ysaker el menu */
+    position: fixed;
+    cursor: pointer;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    left: 20px;
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(248, 248, 248);
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius:30px ;
+    transition: 0.3s;
+}
+nav .close:hover {
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 80px; /*yaksem el espace w yekhou 25% mel toul wlaa l3aredh enty w el direction */ 
+    transition: 0.4s;
+}
+nav a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--main-color);
+}
+.logo1 {      /*logo my petty*/
+    display: flex;
+    position: fixed;
+    width: 100px;
+    top:10px;
+    left: 46%;
+}
+
+section{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+::-webkit-scrollbar{            /*3ordh el faza mte3 scroll*/
+    width: 22px;
+    cursor: pointer;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(235, 235, 235);
+    box-shadow: 0 0 10px #ddd inset;
+}
+::-webkit-scrollbar-thumb{          /*el faza el tscrolli menha */
+    height: 30px;
+    background-color: rgb(53, 134, 255,0.5);
+    border-radius: 20px;
+    cursor:pointer;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color:rgb(53, 134, 255,1);
+}
+/**********************************************home page secton one ********************/
+.one {
+    height: 700px;
+}
+.one .bg {
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+}
+.one p {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    left: 10px;
+    font-size: 38px;
+    font-weight: 600;
+    border-right: 2px solid black;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: control-width 6s steps(32) infinite both,blink 0.5s infinite ;
+
+}
+.btnchat {
+    position: relative;
+    width: 100px;
+    margin-right: 40px;
+    top: -180px;
+    left: 70px;
+}
+.btnchien {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top: -180px;
+    left: 70px;
+}
+.btnp {
+    position: relative;
+    width: 150px;
+    top: -180px;
+    left: 90px;
+}
+.btnchat:hover, 
+.btnchien:hover ,
+.btnp:hover {
+    transform: scale(1.2);
+}
+@keyframes control-width {
+    from {
+        width: 0;
+    }
+    to {
+        width: 600px;
+    }
+}
+@keyframes blink {
+    from{
+        border-right-color: black;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+.abotsustitle {
+    width: 700px;
+    position: relative;
+    font-size: 50px;
+    left: 36%;
+    background-color: transparent;
+}
+/*****************************************section 2 ********************************/
+.two1{
+    background: linear-gradient(#e0ded2,#aaa);
+    height: 700px;
+    margin-top: -120px;
+}
+
+.img1{
+    position: relative;
+    width:700px;
+    top:30px;
+    border-radius: 3px;
+    left: 10%;
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out ;
+}
+.box {
+    position: relative;
+    width: 600px;
+    height: 360px;
+    padding: 15px;
+    background: #ffffff;
+    left: -12%;
+    margin-top: 5%;
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out ;
+}
+.box p {
+    font-size: 20px;
+    font-family: gilroy;
+}
+/**************************************page3***********************************/
+.three {
+    background-color: #eee;
+    background: url(images/stats.jpg);
+    min-height: 400px;
+    margin-top: -70px;
+}
+.statstitle {
+    position: relative;
+    color: white;
+    width: 600px;
+    top: 0px;
+    left: 27.5%;
+    text-align: center;
+    font-size: 45px;
+}
+.nums {
+    width: 1000px;
+    display: flex;
+    margin-left: 30px;
+    margin-top: 60px;
+}
+.nums .num {
+    flex: 1;
+    text-align: center;
+    font-size: 40px;
+    padding: 10px;
+    margin-left: 5px;
+    color: black;
+} 
+.bloc1 {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35px;
+    cursor: pointer;
+}
+.bloc1:hover {
+    border: 4px solid #2ea3dd;
+    border-radius :10px ;
+    color: #2ea3dd;
+
+}
+.bloc1 i {
+    font-size: 60px;
+    margin-left: 35%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.bloc1 p {
+    font-size: 25px;
+    text-align: center ;
+    color: #2ea3dd;
+    font-weight: 600;
+}
+.fa-map-marker {
+    padding-left: 10px;
+}
+/*********************************************section5**************************/
+.five {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#ccc,#bbb);
+    min-height: 1600px;
+}
+.five .servicetitle{
+    position: relative;
+    top: 0px;
+    font-size: 45px;
+    width: 450px;
+    margin-left: 0px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.two {
+    background: url(images/stats.jpg);
+    min-height: 500px;
+    display: flex;
+    margin-top: -100px;
+}
+.reviewtitle {
+    position: relative;
+    width: 600px;
+    top: 50px;
+    left: 27.5%;
+    color: white;
+    text-align: center;
+    font-size: 45px;
+}
+.two .contain1 {
+    width: 400px;
+    height: 220px;
+    background: white;
+    border: 2px solid black;
+    position: relative;
+    left: 0px;
+    top:50px;
+    margin-right: 10px;
+}
+.two .contain1 p {
+    position: relative;
+    left: 29%;
+    top: 6.5%;
+}
+.two .contain1 h3 {
+    position: relative;
+    left: 29%;
+    top: 6.5%;
+    width: 160px;
+}
+.two .contain1 .taswira {
+    background: #000;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    left: 290px;
+    top: -60px;
+}
+.two .contain1 .taswira1 {
+    background: rgb(255, 255, 255);
+    background-image: url(images/tayari.jpg);
+    background-size: cover;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: relative;
+    left: 5px;
+    top: 5px;
+}
+.two .contain1 .taswira2 {
+    background: rgb(255, 255, 255);
+    background-image: url(images/ghada.jpg);
+    background-size: cover;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: relative;
+    left: 5px;
+    top: 5px;
+}
+.two .contain1 .ktiba {
+    position: relative;
+    left: 2%;
+    padding: 5px;
+    top: -70px;
+}
+.two .contain1 .stars {
+    position: relative ;
+    width: 26%;
+    left: 32%;
+    top: -39%;
+}
+.card {
+    position: relative;
+    margin-top: 60px;
+    width: 300px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    transform-style: preserve-3d;
+    transform: perspective(2000px);
+    transition: 1s;
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.15), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover {
+    transform: perspective(2000px) translateX(50%);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card .cover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+    transform-origin: left;
+}
+
+.card:hover .cover {
+    transform: rotateY(-180deg);
+}
+
+.card .cover .kalb1 {
+    max-width: 100%;
+    z-index: 1;
+}
+
+.card .cover::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 140%;
+    background: rgb(255, 255, 255);
+    transform: rotate(37deg);
+    box-shadow: 0 0 0 20px #2ea3dd;
+    transition: 0.4s;
+    transition-delay: 0.65s;
+}
+
+.card:hover .cover::before {
+    width: 0;
+    box-shadow: 0 0 0 280px #2ea3dd;
+    transform: rotate(145deg);
+}
+
+.card .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+    z-index: 1;
+}
+
+.card .details .kalb {
+    width: 240px;
+    margin-top: -40px;
+}
+
+.card .details h3 {
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+.card .details h2 {
+    font-size: 1.5rem;
+    color: #2ea3dd;
+    font-weight: 600;
+}
+
+.card .details a {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #2ea3dd;
+    color: white;
+    margin-top: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+/******************************************************card2*************************/
+
+.card2 {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    transform-style: preserve-3d;
+    transform: perspective(2000px);
+    transition: 1s;
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.15), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card2:hover {
+    transform: perspective(2000px) translateX(-50%);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card2 .cover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+    transform-origin: left;
+}
+
+.card2:hover .cover {
+    transform: rotateY(-180deg);
+}
+
+.card2 .cover .kalb1 {
+    max-width: 100%;
+    z-index: 1;
+}
+
+.card2 .cover::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 140%;
+    background: rgb(255, 255, 255);
+    transform: rotate(90deg);
+    box-shadow: 0 0 0 20px #968215;
+    transition: 0.4s;
+    transition-delay: 0.65s;
+}
+
+.card2:hover .cover::before {
+    width: 0;
+    box-shadow: 0 0 0 280px #9b8401;
+    transform: rotate(145deg);
+}
+
+.card2 .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+    z-index: 1;
+}
+
+.card2 .details .kalb {
+    width: 240px;
+    margin-top: -40px;
+}
+
+.card2 .details h3 {
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+.card2 .details h2 {
+    font-size: 1.5rem;
+    color: #9b8401;
+    font-weight: 600;
+}
+
+.card2 .details a {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #9b8401;
+    color: white;
+    margin-top: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+/******************************************************card3*************************/
+
+.card3 {
+    margin-top: 60px;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    transform-style: preserve-3d;
+    transform: perspective(2000px);
+    transition: 1s;
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.15), 0 20px 20px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.card3:hover {
+    transform: perspective(2000px) translateX(70%);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card3 .cover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+    transform-origin: left;
+}
+
+.card3:hover .cover {
+    transform: rotateY(-180deg);
+}
+
+.card3 .cover .kalb1 {
+    max-width: 100%;
+    z-index: 1;
+}
+
+.card3 .cover::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 140%;
+    background: rgb(255, 255, 255);
+    transform: rotate(147deg);
+    box-shadow: 0 0 0 20px #b93fff;
+    transition: 0.4s;
+    transition-delay: 0.65s;
+}
+
+.card3:hover .cover::before {
+    width: 0;
+    box-shadow: 0 0 0 280px #b93fff;
+    transform: rotate(35deg);
+}
+
+.card3 .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+    z-index: 1;
+}
+
+.card3 .details .kalb {
+    width: 240px;
+    margin-top: -40px;
+}
+
+.card3 .details h3 {
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+.card3 .details h2 {
+    font-size: 1.5rem;
+    color: #b93fff;
+    font-weight: 600;
+}
+
+.card3 .details a {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #b93fff;
+    color: white;
+    margin-top: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+/******************************contactus***********************************/
+.contacts {
+    position: relative;
+    background-color: #aaa;
+    min-height: 1000px;
+    display: flex;
+    margin-top: -62px;
+    background:url(images/shop.jpg);
+}
+.contacts .container {
+    width: 100%;
+    height: 1000px;
+    z-index: 2;
+    color: white;
+    background: rgb(46, 163, 221,0.3);
+    display: flex;
+}
+.contacttitle{
+    position: relative;
+    width: 700px;
+    text-align: center;
+    font-size: 50px;
+    left: 25%;
+    top: 40px;
+    z-index: 100;
+    color: white;
+}
+.contacts .imin {
+    position: relative;
+    height: 500px;
+    flex: 1;
+    top: 20%;
+    padding-left: 50px;
+    text-align:left;
+    justify-content: left;
+    align-items: left;
+    padding-top: 180px;
+}
+.contacts .imin p {
+    font-size: 25px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.contacts .isar {
+    position: relative;
+    flex: 2;
+    height: 500px;
+    top: 20%;
+}   
+/* Style inputs with type="text",type="email", select elements and textareas */
+input[type=text],input[type=email], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container1 {
+      position: relative;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    height: 500px;
+    width: 80%;
+    height: 580px;
+    margin-left: 30px;
+    z-index: 2;
+    color: white;
+    background: rgb(46, 163, 221,0.3);
+  }
+/*****************************foooter*************************/
+footer {
+    position :relative;
+    width: 100%;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    flex-direction: column;
+}
+footer .socialmedia ,.menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+footer .socialmedia li ,footer .menu li {
+    list-style: none;
+}
+footer .socialmedia li a  {
+    font-size: 2em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+footer .socialmedia li a:hover{
+    transform: translateY(-10px);
+    color: black;
+}
+footer .menu li a {
+    font-size: 1.2em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+}
+footer .menu li a:hover {
+    color: black;
+    font-weight: 600;
+    opacity: 1;
+}
+footer p {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(images/wave.png);
+    background-size: 1000px 100px;
+}
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animatewave 4s linear infinite;
+}
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animatewave2 4s linear infinite;
+}
+footer .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animatewave 3s linear infinite;
+}
+footer .wave#wave4  {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 15px;
+    animation: animatewave2 3s linear infinite;
+}
+@keyframes animatewave {
+    0% {
+        background-position-x: 1000px;
+    }
+    100%
+    {
+        background-position-x: 0px;
+    }
+}
+@keyframes animatewave2 {
+    0% {
+        background-position-x: 10px;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}

@@ -1,0 +1,240 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(images/back.jpg);
+    background-size:cover;
+    padding: 30px;
+}
+#eye{
+    position: absolute;
+    left: 333px;
+    color: gray;
+    cursor: pointer ;
+}
+.container{
+    position: relative;
+    max-width: 850px;
+    width: 100%;
+    background: white;
+    padding:30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    perspective: 2800px;
+}
+.bg{
+    position: relative;
+    width: 100%;
+    height: 370px;
+}
+a{
+    text-decoration: none;
+    color: blue;
+}
+.logo1 {
+    position: relative;
+    width: 30px;
+    top: 42px;
+
+}
+.container .cover{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left: 50%;
+    z-index: 98;
+    transition: all 1s ease;
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+.container .cover::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 120;
+}
+.container .cover .front video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 12;
+    backface-visibility:hidden;
+}
+.container form{
+    height: 100%;
+    width: 100%;
+    background:white;
+}
+.container .form-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-container .login-form
+{
+    width: calc(100% / 2 - 20px);
+    margin-left: -15px;
+}
+form .form-container .title{
+    position: relative;
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(1, 1, 117);
+}
+form .form-container .title::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 25px;
+    left: 0;
+    bottom: 0;
+    background: blue;
+}
+form .signin-form .title::before {
+    width: 20px;
+}
+form .form-container .inputboxes{
+    margin-top: 20px;
+}
+form .form-container .inputbox{
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin: 10px ;
+    height: 50px;
+    width: 100%;
+}
+.form-container .inputbox input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0 30px;
+    font-size: 18px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    }
+.form-container .inputbox input:focus,
+.form-container .inputbox input:valid{
+    border-color:rgb(17, 14, 90);
+}
+.form-container .inputbox i {
+    position: absolute;
+    color:rgb(17, 14, 90);
+    font-size: 18px;
+}
+form .form-container .text2 {
+    font-size: 14px;
+    color: rgb(0, 0, 167);
+    margin-left: 10px;
+}
+
+form .form-container .text {
+    font-size: 14px;
+    color: rgb(0, 0, 167);
+    text-align: center;
+}
+form .form-container a {
+    text-decoration: none;
+}
+form .form-container a:hover {
+    text-decoration: underline;
+}
+form .form-container .bouton{
+    color: #fff;
+    margin-top: 40px;
+}
+form .form-container .bouton input{
+    color: #fff;
+    background: rgb(17, 14, 90);
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+form .form-container .bouton input:hover{
+    background: rgb(0, 0, 167);
+    border-color: rgb(0, 0, 167);
+}
+form .form-container label{
+    color: rgb(0, 0, 167);
+    cursor: pointer;
+}
+form .form-container label:hover{
+    text-decoration: underline;
+}
+/*responsive*/
+@media (max-width:900px) {
+    .container .cover {
+        position: absolute;
+        height: 100%;
+        width: 40%;
+        top: 0;
+        left: 60%;
+    }
+    .form-container .login-form {
+        width: 58%;
+    }
+}
+/*-------------------------------------------------------------*/
+@media (max-width:800px) {
+    .container .cover {
+        position: absolute;
+        height: 100%;
+        width: 30%;
+        top: 0;
+        left: 70%;
+    }
+    .form-container .login-form {
+        width: 68%;
+    }
+}
+/*-------------------------------------------------------------*/
+@media (max-width:700px) {
+    .container .cover {
+        position: absolute;
+        height: 100%;
+        width: 20%;
+        top: 0;
+        left: 80%;
+    }
+    .form-container .login-form {
+        width: 78%;
+    }
+}
+/*-------------------------------------------------------------*/
+@media (max-width:600px) {
+    .container .cover {
+        position: absolute;
+        height: 100%;
+        width: 10%;
+        top: 0;
+        left: 90%;
+    }
+    .form-container .login-form {
+        width: 88%;
+    }
+}
+/*-------------------------------------------------------------*/
+@media (max-width:500px) {  
+    .container {
+        max-width: 100%;
+    }
+
+    .form-container .login-form {
+        width: 100%;
+    }
+    .container .cover {
+        width: 0;
+    }
+}
