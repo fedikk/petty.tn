@@ -904,7 +904,7 @@ footer .wave#wave4  {
 
 
 /*responsive*/
-@media (max-width:590px) {
+@media (max-width:730px) {
     .navbar {                   
         position: fixed;
         width: 100%;
