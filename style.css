@@ -903,5 +903,43 @@ footer .wave#wave4  {
 }
 
 
-/*responsive*/ 
+/*responsive*/
+@media (max-width:590px) {
+    .navbar {                   
+        position: fixed;
+        width: 100%;
+        height:100px;
+        background-color: rgb(77, 77, 77);                  /*el nav bar eli fiha el logo w menu*/
+        justify-content: center;
+        align-items: center;
+        z-index: 1111; 
+    }
+    .logo1 {      /*logo my petty*/
+        display: flex;
+        position: fixed;
+        width: 100px;
+        top:10px;
+        left: 40%;
+    }
+    .btnchat {
+        position: relative;
+        width: 80px;
+        margin-right: 40px;
+        top: -180px;
+        left: 30px;
+    }
+    .btnchien {
+        position: relative;
+        width: 80px;
+        height: 100px;
+        top: -180px;
+        left: 30px;
+    }
+    .btnp {
+        position: relative;
+        width: 120px;
+        top: -180px;
+        left: 70px;
+    }
+}
 
