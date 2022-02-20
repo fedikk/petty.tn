@@ -907,7 +907,7 @@ footer .wave#wave4  {
 @media (max-width:720px) {
     .navbar {                   
         position: fixed;
-        width: 100%;
+        width: 700px;
         height:100px;
         background-color: rgb(77, 77, 77);                  /*el nav bar eli fiha el logo w menu*/
         justify-content: center;
@@ -919,11 +919,11 @@ footer .wave#wave4  {
         position: fixed;
         width: 100px;
         top:10px;
-        left: 40%;
+        left: 30%;
     }
     .one {
         position: relative;
-        top: -400px;
+        top: -100px;
         height: 700px;
     }
     .one .bg {
