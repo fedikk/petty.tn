@@ -904,7 +904,7 @@ footer .wave#wave4  {
 
 
 /*responsive*/
-@media (max-width:730px) {
+@media (max-width:720px) {
     .navbar {                   
         position: fixed;
         width: 100%;
@@ -921,6 +921,16 @@ footer .wave#wave4  {
         top:10px;
         left: 40%;
     }
+    .one {
+        position: relative;
+        top: -400px;
+        height: 700px;
+    }
+    .one .bg {
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+     }
     .btnchat {
         position: relative;
         width: 80px;
@@ -942,4 +952,3 @@ footer .wave#wave4  {
         left: 70px;
     }
 }
-
